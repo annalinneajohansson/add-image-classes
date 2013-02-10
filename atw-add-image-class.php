@@ -2,7 +2,7 @@
 /*
 Plugin Name: Add image classes
 Plugin URI: 
-Description: Define additional css classes added to images on post insertion
+Description: Define additional css classes added to images on post insertion. Classes are defined under Settings -> Media
 Version: 1
 Author: Anna Johansson
 Author URI: http://annathewebdesigner.com
@@ -29,7 +29,7 @@ function atw_ic_setup() {
     function atw_ic_input() {
         $options = get_option( 'atw_ic_options' );
         echo "<input name='atw_ic_options[classes]' size='45' type='text' value='" . wp_kses($options['classes'], array()) . "' />";
-		echo '<p class="description">' . __('Separate classes with a space.') . '</p>'; 
+		echo '<p class="description">' . __('Separate classes with a space.', 'atw_ic') . '</p>'; 
     }
 }
 
